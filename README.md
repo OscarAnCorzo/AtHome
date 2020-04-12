@@ -1,4 +1,4 @@
-# at_home
+# AtHome
 
 A new Flutter project.
 
