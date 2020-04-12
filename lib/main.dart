@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:at_home/src/vistas/inicio.dart';
 
-void main(){
-  runApp(new MyApp());
-}
-
-class MyApp extends StatelessWidget{
+class Principal extends StatelessWidget{
   @override
   Widget build(context){
     return MaterialApp(
-      home: Center(
-        child: Text('Hola Mundo')
-      )
+      debugShowCheckedModeBanner: false,
+      home: Inicio()
     );
   }
 }
+
+void main() => runApp(Principal());
+
+
