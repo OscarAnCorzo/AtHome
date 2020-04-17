@@ -14,7 +14,7 @@ description: A new Flutter project.
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.3.2 <3.0.0"
 
 dependencies:
   flutter:
@@ -42,9 +42,10 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #  - images/a_dot_burr.jpeg
-  #  - images/a_dot_ham.jpeg
+  assets:
+    - lib/src/imagenes/bread-2796393_640.jpg
+    - lib/src/imagenes/20190730_120221-1.jpg
+    - lib/src/imagenes/hamburger-494706_640.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

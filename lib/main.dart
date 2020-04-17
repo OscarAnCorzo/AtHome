@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:at_home/src/vistas/inicio.dart';
+import 'package:at_home/src/rutas.dart';
 
 class Principal extends StatelessWidget{
   @override
   Widget build(context){
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Inicio()
+      initialRoute: 'inicio',
+      routes: getRutas()
     );
   }
 }

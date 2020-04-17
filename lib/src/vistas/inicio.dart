@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:at_home/src/componentes/navBarra.dart';
+
 
 class Inicio extends StatelessWidget{
   @override
   Widget build(BuildContext context){
-    List<dynamic> imagenes = ['https://s3-us-west-2.amazonaws.com/artifactuprising/magento/blog/articles/2015-07-20-landscape-photo-tips/2015-07-20-landscape-photo-tips-00.jpg','https://www.tom-archer.com/wp-content/uploads/2018/06/milford-sound-night-fine-art-photography-new-zealand-400x291.jpg'];
+    List<dynamic> imagenes = [
+      'lib/src/imagenes/bread-2796393_640.jpg',
+      'lib/src/imagenes/hamburger-494706_640.jpg'
+    ];
     return Scaffold(
       // ------------------------------ AppBar ----------------------------------
       appBar: AppBar(
@@ -47,7 +52,8 @@ class Inicio extends StatelessWidget{
                               height: 300.0,
                               child: Swiper(
                                 itemBuilder: (BuildContext context,int index){
-                                  return Image.network(imagenes[index],fit: BoxFit.fill,);
+                                  // return Image.network(imagenes[index],fit: BoxFit.fill,);
+                                  return Image.asset(imagenes[index],fit: BoxFit.fill);
                                 },
                                 itemCount: 2,
                                 pagination: SwiperPagination(),
@@ -67,28 +73,8 @@ class Inicio extends StatelessWidget{
         ],
       ),
       // ------------------------------- BottomBar --------------------------------------
-      bottomNavigationBar: BottomAppBar(
-        shape: const CircularNotchedRectangle(),
-        child: Container(
-          height: 50.0,
-          child: Row(
-            children: <Widget>[
-              Expanded(
-                child: IconButton(icon: Icon(Icons.home, color:Colors.black), iconSize:35.0, onPressed: null)
-              ),
-              Expanded(
-                child: IconButton(icon: Icon(Icons.person), iconSize:35.0, onPressed: null)
-              )
-            ],
-          ),
-        )
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: null,
-        tooltip: 'Increment Counter',
-        child: Icon(Icons.add),
-        backgroundColor: Color(0xff4CAF50),
-      ),
+      bottomNavigationBar: NavBarra(),
+      floatingActionButton: BotonAdd(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked
     );
   }
